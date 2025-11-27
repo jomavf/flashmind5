@@ -136,7 +136,7 @@ export const Dashboard: React.FC = () => {
                 </div>
 
                 {/* Hover Stats Expansion */}
-                <div className="absolute inset-x-0 bottom-0 bg-gray-50/90 backdrop-blur-sm p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 border-t border-gray-100">
+                <div className="absolute inset-x-0 bottom-20 bg-gray-50/90 backdrop-blur-sm p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300 border-y border-gray-100">
                   <div className="flex justify-around text-center">
                     <div>
                       <div className="text-lg font-bold text-gray-900">
