@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Clock, CheckCircle } from 'lucide-react';
-import { useApp } from '../context/AppContext';
-import { FlashcardComponent } from '../components/Flashcard';
-import { calculateNextReview } from '../lib/srs';
-import type { Flashcard, SRSGrade } from '../types';
-import { formatDistanceToNow } from 'date-fns';
-import { es } from 'date-fns/locale';
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { ArrowLeft, Clock, CheckCircle } from "lucide-react";
+import { useApp } from "../context/AppContext";
+import { FlashcardComponent } from "../components/Flashcard";
+import { calculateNextReview } from "../lib/srs";
+import type { Flashcard, SRSGrade } from "../types";
+import { formatDistanceToNow } from "date-fns";
+import { es } from "date-fns/locale";
 
 export const StudySession: React.FC = () => {
   const { id } = useParams();

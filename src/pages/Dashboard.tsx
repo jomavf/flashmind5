@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Plus, Play, Edit, Trash2, Clock } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Plus, Play, Edit, Trash2, Clock } from "lucide-react";
 
 import { useApp } from "../context/AppContext";
 import { getDeckStats } from "../lib/deckUtils";
@@ -58,8 +58,7 @@ export const Dashboard: React.FC = () => {
                 <div
                   className={cn(
                     "h-3 w-full",
-                    deck.color ||
-                      "bg-linear-to-r from-indigo-500 to-purple-500"
+                    deck.color || "bg-linear-to-r from-indigo-500 to-purple-500"
                   )}
                 />
 
