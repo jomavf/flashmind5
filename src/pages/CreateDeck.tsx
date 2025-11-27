@@ -81,7 +81,7 @@ export const CreateDeck: React.FC = () => {
       id: id || crypto.randomUUID(),
       title,
       description,
-      color: "bg-gradient-to-r from-blue-500 to-cyan-500", // Randomize later
+      color: "bg-linear-to-r from-blue-500 to-cyan-500", // Randomize later
       cards: validCards.map((c) => ({
         id: c.id || crypto.randomUUID(),
         front: c.front!,

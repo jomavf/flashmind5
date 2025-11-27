@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Plus, MoreVertical, Play, Edit, Trash2, Clock } from "lucide-react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Plus, Play, Edit, Trash2, Clock } from 'lucide-react';
+
 import { useApp } from "../context/AppContext";
 import { getDeckStats } from "../lib/deckUtils";
 import { cn } from "../lib/utils";
@@ -9,7 +10,6 @@ import { es } from "date-fns/locale";
 
 export const Dashboard: React.FC = () => {
   const { data, deleteDeck } = useApp();
-  const navigate = useNavigate();
 
   return (
     <div className="space-y-8">
@@ -59,7 +59,7 @@ export const Dashboard: React.FC = () => {
                   className={cn(
                     "h-3 w-full",
                     deck.color ||
-                      "bg-gradient-to-r from-indigo-500 to-purple-500"
+                      "bg-linear-to-r from-indigo-500 to-purple-500"
                   )}
                 />
 

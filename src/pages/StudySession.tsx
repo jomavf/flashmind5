@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Clock, CheckCircle } from "lucide-react";
-import { useApp } from "../context/AppContext";
-import { FlashcardComponent } from "../components/Flashcard";
-import { calculateNextReview } from "../lib/srs";
-import type { Flashcard, SRSGrade } from "../types";
-import { cn } from "../lib/utils";
-import { formatDistanceToNow } from "date-fns";
-import { es } from "date-fns/locale";
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { ArrowLeft, Clock, CheckCircle } from 'lucide-react';
+import { useApp } from '../context/AppContext';
+import { FlashcardComponent } from '../components/Flashcard';
+import { calculateNextReview } from '../lib/srs';
+import type { Flashcard, SRSGrade } from '../types';
+import { formatDistanceToNow } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 export const StudySession: React.FC = () => {
   const { id } = useParams();
@@ -22,7 +21,7 @@ export const StudySession: React.FC = () => {
   const [nextAvailableTime, setNextAvailableTime] = useState<number | null>(
     null
   );
-  const [now, setNow] = useState(Date.now());
+  const [now, setNow] = useState(() => Date.now());
   const [newCardsCount, setNewCardsCount] = useState(0);
 
   // Update deck reference when data changes
@@ -244,7 +243,7 @@ export const StudySession: React.FC = () => {
       </div>
 
       {/* Controls */}
-      <div className="flex justify-center gap-4 min-h-[80px]">
+      <div className="flex justify-center gap-4 min-h-20">
         {!isFlipped ? (
           <button
             onClick={() => setIsFlipped(true)}

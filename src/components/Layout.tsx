@@ -2,11 +2,8 @@ import React from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import {
   Brain,
-  Settings,
-  Plus,
   Save,
   FolderOpen,
-  Download,
 } from "lucide-react";
 import { useApp } from "../context/AppContext";
 import { cn } from "../lib/utils";
